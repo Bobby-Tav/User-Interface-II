@@ -56,7 +56,7 @@ html{
     font-size:62.5%;
 }
 body{
-    font-size:2.6rem;
+    font-size:1.6rem;
     line-height:1.5;
     color:#4f4f4f;
 }
@@ -69,6 +69,10 @@ h2{
 }
 a{
     text-decoration:none;
+    font-size:2rem;
+}
+p{
+    font-size:1.9rem;
 }
 /* Header style */
 header{
@@ -86,20 +90,22 @@ header nav{
 nav a{
     border:1px solid #4f4f4f;
     color:#4f4f4f;
-    padding:4% 8%;
-    transition: 1s;
+    padding:4% 20%;
 }
 nav a:hover{
     border:1px solid #ffffff;
     color:#fff;
-    background-color:#4f4f4f;  
+    background-color:#4f4f4f; 
+    transition: 1s; 
 }
 /* Hero */
-.hero img{
-    display:block;
+.container{
+    display:flex;
+}
+.container img{
     width:100%;
-    height:60vh;
-    margin-bottom:3%;
+    height:55vh;
+    margin:2% 1%;
 }
 
 /* Minor section*/
@@ -107,22 +113,23 @@ nav a:hover{
 .minor{
     display:flex;
     flex-wrap:nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom:2%;
+    margin:1%;
 }
 .minor img{
     width:16%;
     height:60vh;
 }
-.minor p{
+.minor .text-container{
     width:16%;
+    text-align:center;
 }
-p a{
+.text-container a{
     font-weight: bold;
     color:#4f4f4f;
 }
-p a:hover{
+.text-container a:hover{
     border:1px solid #4f4f4f;
 }
 /* Footer */
@@ -143,4 +150,31 @@ footer a:hover{
     padding:1% 2%;
     background-color:#4f4f4f;
     transition:1s;
+}
+/* Responsive Styles */
+/* Tablet */
+@media(max-width:800px){
+    /* Header */
+    header p{
+        margin:0 20%;
+    }
+    /* minor styles */
+    .minor{
+        flex-wrap:wrap;
+        align-content: center;
+    }
+    .minor img{
+        width:46%;
+        height:60vh;
+        margin:2%;
+    }
+    .minor .text-container{
+        width:100%;
+    }
+
+    .text-container{
+        width:60%;
+    }
+
+    
 }
